@@ -95,9 +95,9 @@ alter table tab_Vendas_canceladas
 ('Mouse razer', 10.000, 40,10)
 go
 insert into tb_cli (nome,idade,sexo,email,endereco,fone) VALUES 
-('Ayodele',17,'Maculino','Ayodele@gmail.com','AV paulista, 343', '94584545' ),
-('Eduardo',45,'Maculino','Eduardo@gmail.com','Rua Jacu Pessego, 191', '55124151' ),
-('Zezinho',18,'Maculino','Zezinho@gmail.com','Rua aldeia, 248', '8544121')
+('Ayodele',17,'Maculino','Ayodele@gmail.com','AV Aguia de haia, 343', '94584545' ),
+('Eduardo',45,'Maculino','Eduardo@gmail.com','Rua Sonho Gaucho, 191', '55124151' ),
+('Zezinho',18,'Maculino','Zezinho@gmail.com','Av. Imperador, 248', '8544121')
                                                                                                                  
 go
 insert into tb_compras_item (id_venda,id_hardware,pco_vda,qtde_item) VALUES 
@@ -131,10 +131,12 @@ left join tab_Vendas v
 on v.id_cliente = c.id_cliente WHERE v.id_cliente is null
 
 
-
-
 select vi.id_hardware, h.descricao FROM tab_hard as h
 left join tb_compras_item vi
 on vi.id_hardware = h.descricao  WHERE vi.id_hardware is null
 
-go 
+
+SELECT * FROM tb_cli 
+go
+SELECT * FROM tab_Vendas
+
