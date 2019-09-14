@@ -128,7 +128,11 @@ go
 
 select v.id_cliente, c.nome FROM tb_cli c
 left join tab_Vendas v
-on v.id_cliente = c.id_cliente WHERE v.id_cliente is null
+on v.id_cliente = c.id_cliente 
+
+select v.id_cliente, c.nome FROM tb_cli c
+right join tab_Vendas v
+on v.id_cliente = c.id_cliente  
 
 
 select vi.id_hardware, h.descricao FROM tab_hard as h
@@ -136,7 +140,10 @@ left join tb_compras_item vi
 on vi.id_hardware = h.descricao  WHERE vi.id_hardware is null
 
 
+
 SELECT * FROM tb_cli 
 go
 SELECT * FROM tab_Vendas
+go
+SELECT * FROM tb_compras_item
 
